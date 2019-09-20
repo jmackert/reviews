@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title th:text="${reviewModel.name}"></title></title>
+</head>
+<style>
+        h1{text-align: center;}
+        main{text-align: center;}
+        footer{text-align:center;}
+        body {background-color: powderblue;}
+</style>
+<body>
+
+    <header>
+        <h1 th:text="${reviewModel.name}"></h1>
+    </header>
+
+    <main>
+        
+        <img th:src="${reviewModel.ImgUrl}">
+        <p> Category: <a th:text="${reviewModel.category}"></a></p>
+        <p th:text="${reviewModel.description}"></p>
+    </main>
+
+    <footer>
+        <p><a href="/show_reviews">Back To  All Reviews</a> </p>
+        <small>Copyright Jonah Mackert</small>
+    </footer>
+
+</body>
+</html>
