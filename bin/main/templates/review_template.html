@@ -3,30 +3,21 @@
 
 <head>
     <title th:text="${reviewModel.name}"></title></title>
+    <link rel="stylesheet" href="/css/main.css" />
 </head>
-<style>
-        h1{text-align: center;}
-        main{text-align: center;}
-        footer{text-align:center;}
-        body {background-color: powderblue;}
-</style>
-<body>
-
-    <header>
-        <h1 th:text="${reviewModel.name}"></h1>
+<body class="main-body">
+    <header class="main-header">
+        <h1 class="main-header__title" th:text="${reviewModel.name}"></h1>
+        <nav class="nav-menu">
+            <ul class="nav-menu__list">
+                <li class="nav-menu__list-item"><a href="/show_reviews">Back To  All Reviews</a></li>
+            </ul>
+        </nav>
     </header>
-
-    <main>
-        
+    <main class="main-items">
         <img th:src="${reviewModel.ImgUrl}">
-        <p> Category: <a th:text="${reviewModel.category}"></a></p>
+        <p th:text="${reviewModel.category}"></p>
         <p th:text="${reviewModel.description}"></p>
     </main>
-
-    <footer>
-        <p><a href="/show_reviews">Back To  All Reviews</a> </p>
-        <small>Copyright Jonah Mackert</small>
-    </footer>
-
 </body>
 </html>

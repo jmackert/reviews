@@ -2,29 +2,18 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>A List Of All Reviews</title>
+    <link rel="stylesheet" href="/css/main.css" />
 </head>
-<style>
-        ul{list-style-type: none;}
-        h1{text-align: center;}
-        main{text-align: center;}
-        footer{text-align:center;}
-        body {background-color: lightcoral;}
-</style>
-<body>
-
-    <header>
-        <h1>A List of All Reviews</h1>
+<body class="main-body">
+    <header class="home-header">
+        <h1 class="home-header__title">Grandma's Cat Pictures</h1>
     </header>
 
     <main>
-        <ul>
-            <li th:each="review: ${reviewsModel}"><a th:href="|/show_reviews/${review.id}|"
+        <ul class="nav-menu__list">
+            <li th:each= "review: ${reviewsModel}"><a th:href="|/show_reviews/${review.id}|"
                  th:text="${review.name}"></a></li>
         </ul>
     </main>
-
-    <footer>
-        <small>Copyright Jonah Mackert</small>
-    </footer>
 </body>
 </html>
